@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurex Constructions | Built to Last | Engineering & Infrastructure</title>
+  <meta name="description" content="Aurex Constructions – Visionary engineering, architecture, and infrastructure development. Built to last with uncompromising precision and modern construction practices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mrs+Saint+Delafield&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+  <!-- ==================== SVG ASSET DEFINITIONS ==================== -->
+  <svg width="0" height="0" style="position:absolute; visibility:hidden;" aria-hidden="true">
+    <defs>
+      <!-- Stepped Geometric Aurex Logo -->
+      <symbol id="logo" viewBox="0 0 40 32">
+        <path d="M0 10h8V0h8v10h8V0h8v10h8v22H0z"/>
+        <g class="cut">
+          <rect x="5" y="19" width="6" height="6"/>
+          <rect x="17" y="19" width="6" height="6"/>
+          <rect x="29" y="19" width="6" height="6"/>
+        </g>
+      </symbol>
+
+      <!-- Detailed Tower Construction Crane with Beacon & Rigging -->
+      <symbol id="crane-detailed" viewBox="0 0 440 420">
+        <!-- Tower Mast Lattice -->
+        <g fill="none" stroke="currentColor" stroke-width="4">
+          <path d="M180 70v350 M220 70v350"/>
+          <path d="M180 110l40 40-40 40 40 40-40 40 40 40-40 40 40 40"/>
+          <path d="M220 110l-40 40 40 40-40 40 40 40-40 40 40 40"/>
+          <!-- Jib Boom Truss -->
+          <path d="M20 70h400"/>
+          <path d="M20 70l180-50 20 0 180 50"/>
+          <path d="M200 20v50"/>
+          <path d="M60 70l140-50 M120 70l80-50 M300 70l-100-50 M360 70l-160-50"/>
+          <!-- Cable stays -->
+          <line x1="200" y1="20" x2="390" y2="70" stroke-dasharray="4 4" stroke-width="2"/>
+          <line x1="200" y1="20" x2="40" y2="70" stroke-dasharray="4 4" stroke-width="2"/>
+        </g>
+        <!-- Counterweight and Machinery House -->
+        <rect x="320" y="66" width="68" height="42" fill="currentColor" rx="2"/>
+        <!-- Operator Cabin -->
+        <rect x="170" y="58" width="56" height="30" fill="currentColor" rx="3"/>
+        <rect x="174" y="64" width="22" height="18" fill="var(--or, #ff3d0a)"/>
+        <!-- Aviation Obstruction Light (Blinking Beacon) -->
+        <circle cx="200" cy="18" r="5" fill="#ff1e1e" class="crane-beacon"/>
+        <!-- Trolley & Hoist Rigging -->
+        <g class="crane-trolley">
+          <rect x="76" y="66" width="28" height="10" fill="currentColor"/>
+          <line x1="90" y1="76" x2="90" y2="210" stroke="currentColor" stroke-width="2.5" class="hoist-wire"/>
+          <g class="crane-hook" transform="translate(90, 210)">
+            <rect x="-10" y="0" width="20" height="12" fill="currentColor"/>
+            <path d="M0 12v12a9 9 0 0 0 9 9h3a6 6 0 0 1-6 6 9 9 0 0 1-9-9v-18" fill="none" stroke="currentColor" stroke-width="3"/>
+          </g>
+        </g>
+      </symbol>
+
+      <!-- Multi-Loop Hand-Drawn Sketch Circle for Contact -->
+      <symbol id="sketch-circle" viewBox="0 0 520 220">
+        <!-- Loop 1 -->
+        <path class="sketch-path p1" d="M 40,110 C 35,45 130,22 260,20 C 390,18 485,42 480,108 C 475,175 380,200 250,202 C 120,204 42,170 40,110 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- Loop 2 -->
+        <path class="sketch-path p2" d="M 52,95 C 48,32 145,15 275,16 C 405,17 495,48 490,118 C 485,188 370,210 240,208 C 105,206 54,160 52,95 Z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <!-- Loop 3 Flourish -->
+        <path class="sketch-path p3" d="M 68,130 C 58,60 160,28 290,26 C 418,24 502,62 472,135 C 442,208 320,214 200,210 C 90,206 20,165 68,130" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ==================== SPLASH SCREEN ==================== -->
+  <div id="splash" aria-label="Loading Aurex Constructions">
+    <div class="curtain c1"></div>
+    <div class="curtain c2"></div>
+
+    <!-- Animated Blueprint Grid in Background -->
+    <div class="sp-blueprint-grid"></div>
+
+    <div class="splash-in">
+      <!-- Crane Hoisting Logo into Position -->
+      <div class="sp-crane-wrapper">
+        <svg class="sp-crane"><use href="#crane-detailed"/></svg>
+      </div>
+
+      <!-- Stepped Geometric Logo with Glow & Assembling Animation -->
+      <div class="sp-logo-frame">
+        <svg class="sp-logo"><use href="#logo"/></svg>
+        <div class="logo-beam"></div>
+      </div>
+
+      <!-- Animated Name: Kinetic Letters + Signature Script Overlay -->
+      <div class="sp-brand-wrapper">
+        <h1 class="sp-name">
+          <span>A</span><span>U</span><span>R</span><span>E</span><span>X</span>
+        </h1>
+        <div class="sp-script-overlay">Constructions</div>
+      </div>
+
+      <p class="sp-tag">Architecture · Engineering · Built to Last</p>
+
+      <!-- Rising Skyline Silhouette Graphic -->
+      <div class="sp-sky" id="sky" title="Skyline Foundation"></div>
+
+      <!-- Construction Progress Bar -->
+      <div class="sp-bar-container">
+        <div class="sp-bar"><i id="bar"></i></div>
+      </div>
+
+      <!-- Dynamic Construction Milestone Stages -->
+      <div class="sp-meta-info">
+        <div class="sp-num"><span id="pct">0</span>%</div>
+        <div class="sp-stage-text">
+          <span class="stage-prefix">STAGE:</span>
+          <em id="stage">SURVEYING GEOTECHNICAL SITE DATA</em>
+        </div>
+      </div>
+
+      <!-- Technical Coordinates Display -->
+      <div class="sp-coords">
+        <span>LAT: 18.5204° N</span>
+        <span class="sep">|</span>
+        <span>LONG: 73.8567° E</span>
+        <span class="sep">|</span>
+        <span>DATUM: WGS84</span>
+      </div>
+    </div>
+
+    <!-- Skip Intro Button -->
+    <button id="skip-splash" class="sp-skip-btn" aria-label="Skip introduction">
+      SKIP INTRO <span class="arrow">→</span>
+    </button>
+
+    <!-- Caution Hazard Stripes along Bottom & Top -->
+    <div class="hazard top"></div>
+    <div class="hazard bottom"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header id="nav">
+    <!-- Left Metadata Coordinates / Tag -->
+    <div class="nav-meta">
+      <span>ARCHITECTURE</span>
+      <span>URBAN DESIGN</span>
+      <span>PLANNING &amp; EXECUTION</span>
+    </div>
+
+    <!-- Brand Logo -->
+    <a href="#home" class="brand" aria-label="Aurex Constructions Home">
+      <svg><use href="#logo"/></svg>
+      <div class="brand-text">
+        <span class="b-main">AUREX</span>
+        <span class="b-sub">CONSTRUCTIONS</span>
+      </div>
+    </a>
+
+    <!-- Main Navigation Links -->
+    <nav id="menu" aria-label="Main Navigation">
+      <a href="#about" class="nav-link"><span class="nav-num">01</span>ABOUT</a>
+      <a href="#projects" class="nav-link"><span class="nav-num">02</span>PROJECTS</a>
+      <a href="#services" class="nav-link"><span class="nav-num">03</span>SERVICES</a>
+      <a href="#estimator" class="nav-link"><span class="nav-num">04</span>ESTIMATOR</a>
+      <a href="#contact" class="nav-link"><span class="nav-num">05</span>CONTACT</a>
+      <a href="#contact" class="cta-m">HAVE A VISION? LET'S BUILD IT →</a>
+    </nav>
+
+    <!-- Header CTA Button -->
+    <a href="#contact" class="cta" aria-label="Have a vision? Let's build it">
+      <span class="cta-small">HAVE A VISION?</span>
+      <b class="cta-bold">LET'S BUILD IT.</b>
+    </a>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ==================== SLIDE 1: HERO SECTION ==================== -->
+    <section id="home" class="hero">
+      <div class="hero-bg-grid"></div>
+      
+      <!-- Top Left Eyebrow -->
+      <div class="eyebrow rv">
+        <span class="dot"></span>
+        <p>Architecture.<br>Engineering.<br>Infrastructure.</p>
+      </div>
+
+      <!-- Top Right Project Year Stamp -->
+      <div class="hero-stamp rv">
+        <svg class="stamp-logo"><use href="#logo"/></svg>
+        <span>EST. 2011 · AUREX GROUP</span>
+      </div>
+
+      <!-- Giant Center Title with Stencil Text & Handwriting Signature Script Overlay -->
+      <div class="hero-title">
+        <h1 class="big" aria-label="CONSTRUCTIONS">
+          <!-- Populated by script into animated spans: CONSTRUCTIONS -->
+        </h1>
+        <span class="script hero-script">Aurex</span>
+      </div>
+
+      <!-- Silhouette Crane on Right Side with Rigging & Blinking Beacon -->
+      <div class="hero-crane-wrap">
+        <svg class="hero-crane"><use href="#crane-detailed"/></svg>
+      </div>
+
+      <!-- Bottom Subtitle / Mission Statement -->
+      <div class="hero-sub rv">
+        <p>From concept to reality, we build spaces with precision, passion, and lasting value.</p>
+        <div class="hero-badges">
+          <span class="badge">✦ ISO 9001:2015 CERTIFIED</span>
+          <span class="badge">✦ ZERO-ACCIDENT SITES</span>
+        </div>
+      </div>
+
+      <!-- Interactive Scroll Down Indicator -->
+      <a href="#about" class="scroll" aria-label="Scroll to about section">
+        <span>EXPLORE</span>
+        <i></i>
+      </a>
+
+      <!-- Bottom Hazard Strip -->
+      <div class="hazard"></div>
+    </section>
+
+    <!-- Dynamic Architectural Marquee Ribbon -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>RESIDENTIAL ✦ COMMERCIAL ✦ INDUSTRIAL ✦ INFRASTRUCTURE ✦ RENOVATION ✦ BUILT TO LAST ✦ </span>
+        <span>RESIDENTIAL ✦ COMMERCIAL ✦ INDUSTRIAL ✦ INFRASTRUCTURE ✦ RENOVATION ✦ BUILT TO LAST ✦ </span>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 2: ABOUT / INTRODUCING ==================== -->
+    <section id="about" class="about">
+      <!-- 3-Way Split Header from UI: INTRODUCING | [City Image] | AUREX -->
+      <div class="about-top">
+        <h2 class="rv ab-title">INTRODUCING</h2>
+        <div class="about-img-frame rv d1">
+          <img src="images/city.jpg" alt="Aurex modern city skyline architectural development" loading="lazy">
+          <div class="frame-tag">AUREX METROPOLIS · 2026</div>
+        </div>
+        <h2 class="rv d2 ab-title or">AUREX</h2>
+      </div>
+
+      <!-- Blueprint / Currency Texture Ribbon with Script "Constructions" -->
+      <div class="money rv">
+        <img src="images/money.jpg" alt="Engineering blueprints and currency foundation texture" loading="lazy">
+        <span class="script">Constructions</span>
+        <div class="money-overlay"></div>
+      </div>
+
+      <!-- Narrative Section: In Strategy Market -->
+      <div class="about-body">
+        <div class="section-tag rv">STRATEGIC INFRASTRUCTURE &amp; CONTRACTING</div>
+        <h3 class="rv">In Strategy Market</h3>
+        <p class="rv">
+          Aurex Constructions is a construction and infrastructure company committed to delivering high-quality projects through sound engineering, disciplined execution, and meticulous attention to detail. We bring together technical expertise, modern construction practices, and a strong focus on quality and safety to deliver reliable solutions across every stage of development. With a commitment to integrity, efficiency, and long-term value, we strive to build structures that serve their purpose and stand the test of time.
+        </p>
+        <div class="about-stamp-row rv">
+          <svg class="mini-logo"><use href="#logo"/></svg>
+          <b class="or">BUILT TO LAST.</b>
+        </div>
+      </div>
+
+      <!-- Live Animated Key Performance Metrics Counters -->
+      <div class="stats" role="region" aria-label="Aurex key company metrics">
+        <div class="stat-card rv">
+          <div class="stat-icon">🏗️</div>
+          <strong data-n="120" data-s="+">0</strong>
+          <span>Projects Delivered</span>
+          <small>Residential &amp; Commercial</small>
+        </div>
+        <div class="stat-card rv d1">
+          <div class="stat-icon">📐</div>
+          <strong data-n="15" data-s="+">0</strong>
+          <span>Years Experience</span>
+          <small>Proven Industry Mastery</small>
+        </div>
+        <div class="stat-card rv d2">
+          <div class="stat-icon">👷</div>
+          <strong data-n="80" data-s="+">0</strong>
+          <span>Skilled Engineers</span>
+          <small>Master Civil &amp; MEP Team</small>
+        </div>
+        <div class="stat-card rv d3">
+          <div class="stat-icon">🛡️</div>
+          <strong data-n="100" data-s="%">0</strong>
+          <span>Safety Commitment</span>
+          <small>Zero Incident Standard</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: PROJECTS SHOWCASE ==================== -->
+    <section id="projects" class="projects">
+      <!-- Section Header -->
+      <div class="projects-header">
+        <div class="p-title-wrap">
+          <div class="sub-tag rv">FEATURED ARCHITECTURE</div>
+          <h2 class="big-t rv">PROJECTS <span class="scribble"></span></h2>
+        </div>
+        <p class="rv lead">
+          From foundation to finish, our work speaks for itself. Discover our featured projects, where craftsmanship meets visionary design and rigorous engineering standards.
+        </p>
+      </div>
+
+      <!-- Project Filter Tabs -->
+      <div class="project-tabs rv" role="tablist">
+        <button class="p-tab active" data-filter="all">ALL WORKS</button>
+        <button class="p-tab" data-filter="commercial">COMMERCIAL</button>
+        <button class="p-tab" data-filter="infrastructure">INFRASTRUCTURE</button>
+        <button class="p-tab" data-filter="residential">RESIDENTIAL</button>
+      </div>
+
+      <!-- Architectural Projects Grid with 3D Interactive Tilt -->
+      <div class="cards" id="projects-grid">
+        <!-- Project 1 -->
+        <article class="card rv" data-category="infrastructure" data-modal="concrete">
+          <div class="card-img-wrap">
+            <img src="images/concrete.jpg" alt="Concrete Arch Works Infrastructure Project" loading="lazy">
+            <span class="card-badge">BORCELLE 2028</span>
+          </div>
+          <div class="card-info">
+            <small>INFRASTRUCTURE DEVELOPMENT</small>
+            <h4>Concrete Arch Works</h4>
+            <p class="card-desc">Curved brutalist concrete reinforced structural engineering with earthquake resilience.</p>
+            <div class="card-meta">
+              <span>📍 METROPOLITAN CORRIDOR</span>
+              <button class="card-view-btn" aria-label="View Concrete Arch Works details">SPECIFICATIONS →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card rv d1" data-category="commercial" data-modal="glass">
+          <div class="card-img-wrap">
+            <img src="images/glass.jpg" alt="Borcelle Tower 2028 Modern Commercial Skyscraper" loading="lazy">
+            <span class="card-badge">BORCELLE 2028</span>
+          </div>
+          <div class="card-info">
+            <small>COMMERCIAL HIGH-RISE</small>
+            <h4>Borcelle Tower 2028</h4>
+            <p class="card-desc">42-story corporate headquarters featuring dynamic double-glazed curtain wall facade.</p>
+            <div class="card-meta">
+              <span>📍 FINANCIAL DISTRICT</span>
+              <button class="card-view-btn" aria-label="View Borcelle Tower details">SPECIFICATIONS →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card rv d2" data-category="residential" data-modal="skyline">
+          <div class="card-img-wrap">
+            <img src="images/contact.jpg" alt="Skyline Residences Luxury Architecture" loading="lazy">
+            <span class="card-badge">COMPLETED 2025</span>
+          </div>
+          <div class="card-info">
+            <small>RESIDENTIAL COMPLEX</small>
+            <h4>Skyline Residences</h4>
+            <p class="card-desc">High-density luxury multi-family apartments with integrated green terraces and smart home automation.</p>
+            <div class="card-meta">
+              <span>📍 UPTOWN PARKWAY</span>
+              <button class="card-view-btn" aria-label="View Skyline Residences details">SPECIFICATIONS →</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: CONSTRUCTION SERVICES (INTERACTIVE) ==================== -->
+    <section id="services" class="services">
+      <!-- Section Title with Orange Circle Emblem -->
+      <div class="svc-header">
+        <div class="sub-tag rv">FULL LIFECYCLE SOLUTIONS</div>
+        <h2 class="big-t rv">
+          CONSTRUCTION <span class="smile" title="Aurex Craftsmanship Badge"></span> SERVICES
+        </h2>
+        <p class="svc-intro rv">
+          Tailored engineering, civil contracting, and project management capabilities designed to execute projects of any scale on-time and within budget.
+        </p>
+      </div>
+
+      <!-- Split Interactive Services Layout: Aligned Points on Left + Live Interactive Preview Card on Right -->
+      <div class="svc-interactive-layout">
+        <!-- The Arranged Points (01 to 05) -->
+        <div class="svc-points-col">
+          <ul class="svc" role="list">
+            <!-- Point 01: Residential Construction -->
+            <li class="rv open" data-service="residential" tabindex="0">
+              <button class="svc-btn" aria-expanded="true" aria-controls="svc-more-1">
+                <span class="no">01.</span>
+                <span class="ti">RESIDENTIAL CONSTRUCTION</span>
+                <span class="ds">Homes, villas, apartments, and residential developments.</span>
+                <span class="ar"><i>+</i></span>
+              </button>
+              <div id="svc-more-1" class="more">
+                <div class="more-content">
+                  <p>Comprehensive turnkey residential contracting covering architectural foundation, high-grade framing, luxury finishes, MEP electrical &amp; plumbing, and final occupancy certifications.</p>
+                  <div class="svc-tags">
+                    <span>✦ Custom Luxury Villas</span>
+                    <span>✦ High-Rise Apartments</span>
+                    <span>✦ Gated Communities</span>
+                    <span>✦ Seismic Engineering</span>
+                  </div>
+                  <div class="svc-action-bar">
+                    <span class="svc-stat">⏱ Typical Lead: 6 – 18 Months</span>
+                    <button class="svc-quote-trigger" data-service-type="Residential">ESTIMATE RESIDENTIAL PROJECT →</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Point 02: Commercial Construction -->
+            <li class="rv" data-service="commercial" tabindex="0">
+              <button class="svc-btn" aria-expanded="false" aria-controls="svc-more-2">
+                <span class="no">02.</span>
+                <span class="ti">COMMERCIAL CONSTRUCTION</span>
+                <span class="ds">Office buildings, retail spaces, business complexes, and commercial developments.</span>
+                <span class="ar"><i>+</i></span>
+              </button>
+              <div id="svc-more-2" class="more">
+                <div class="more-content">
+                  <p>State-of-the-art business towers, shopping centers, and enterprise headquarters engineered for maximum operational efficiency, LEED sustainability, and dynamic tenant layouts.</p>
+                  <div class="svc-tags">
+                    <span>✦ Grade-A Office Parks</span>
+                    <span>✦ Retail Shopping Malls</span>
+                    <span>✦ High-Performance Facades</span>
+                    <span>✦ Smart Building Systems</span>
+                  </div>
+                  <div class="svc-action-bar">
+                    <span class="svc-stat">⏱ Typical Lead: 12 – 30 Months</span>
+                    <button class="svc-quote-trigger" data-service-type="Commercial">ESTIMATE COMMERCIAL PROJECT →</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Point 03: Industrial Construction -->
+            <li class="rv" data-service="industrial" tabindex="0">
+              <button class="svc-btn" aria-expanded="false" aria-controls="svc-more-3">
+                <span class="no">03.</span>
+                <span class="ti">INDUSTRIAL CONSTRUCTION</span>
+                <span class="ds">Factories, warehouses, manufacturing units, and heavy industrial setups.</span>
+                <span class="ar"><i>+</i></span>
+              </button>
+              <div id="svc-more-3" class="more">
+                <div class="more-content">
+                  <p>Heavy-duty structural execution including pre-engineered steel buildings (PEB), deep vibration-isolated machinery foundations, automated logistics hubs, and hazardous material safety compliance.</p>
+                  <div class="svc-tags">
+                    <span>✦ Logistics &amp; Warehousing</span>
+                    <span>✦ Manufacturing Plants</span>
+                    <span>✦ Heavy Foundation Piling</span>
+                    <span>✦ Industrial Cold Storage</span>
+                  </div>
+                  <div class="svc-action-bar">
+                    <span class="svc-stat">⏱ Typical Lead: 8 – 24 Months</span>
+                    <button class="svc-quote-trigger" data-service-type="Industrial">ESTIMATE INDUSTRIAL PROJECT →</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Point 04: Infrastructure Development -->
+            <li class="rv" data-service="infrastructure" tabindex="0">
+              <button class="svc-btn" aria-expanded="false" aria-controls="svc-more-4">
+                <span class="no">04.</span>
+                <span class="ti">INFRASTRUCTURE DEVELOPMENT</span>
+                <span class="ds">Roads, bridges, public transit, master planning, and civil infrastructure.</span>
+                <span class="ar"><i>+</i></span>
+              </button>
+              <div id="svc-more-4" class="more">
+                <div class="more-content">
+                  <p>Municipal and mega-scale civic engineering: highway corridors, multi-span bridges, underground stormwater conduits, flyovers, and mass-transit transport hubs built for century-long lifespans.</p>
+                  <div class="svc-tags">
+                    <span>✦ Highway &amp; Expressway Networks</span>
+                    <span>✦ Prestressed Concrete Bridges</span>
+                    <span>✦ Urban Drainage &amp; Utilities</span>
+                    <span>✦ Transit Interchange Terminals</span>
+                  </div>
+                  <div class="svc-action-bar">
+                    <span class="svc-stat">⏱ Typical Lead: 18 – 48 Months</span>
+                    <button class="svc-quote-trigger" data-service-type="Infrastructure">ESTIMATE INFRASTRUCTURE PROJECT →</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Point 05: Renovation & Redevelopment -->
+            <li class="rv" data-service="renovation" tabindex="0">
+              <button class="svc-btn" aria-expanded="false" aria-controls="svc-more-5">
+                <span class="no">05.</span>
+                <span class="ti">RENOVATION &amp; REDEVELOPMENT</span>
+                <span class="ds">Structural upgrades, modernization, restoration, and adaptive reuse projects.</span>
+                <span class="ar"><i>+</i></span>
+              </button>
+              <div id="svc-more-4" class="more">
+                <div class="more-content">
+                  <p>Advanced structural retrofitting, carbon-fiber column wrapping, heritage building preservation, energy-efficient MEP overhauls, and converting aging structures into modern, revenue-generating spaces.</p>
+                  <div class="svc-tags">
+                    <span>✦ Seismic Retrofitting</span>
+                    <span>✦ Facade Modernization</span>
+                    <span>✦ Adaptive Industrial Reuse</span>
+                    <span>✦ Interior Remodeling</span>
+                  </div>
+                  <div class="svc-action-bar">
+                    <span class="svc-stat">⏱ Typical Lead: 3 – 12 Months</span>
+                    <button class="svc-quote-trigger" data-service-type="Renovation">ESTIMATE RENOVATION PROJECT →</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dynamic Live Interactive Preview Showcase Card -->
+        <aside class="svc-preview-panel rv d1" id="svc-preview">
+          <div class="preview-card-inner">
+            <div class="preview-header">
+              <span class="preview-pill" id="preview-tag">SERVICE 01 / RESIDENTIAL</span>
+              <span class="preview-live-status">● ACTIVE SPEC</span>
+            </div>
+            <div class="preview-img-container">
+              <img id="preview-img" src="images/contact.jpg" alt="Active service preview architecture">
+              <div class="preview-img-grid"></div>
+            </div>
+            <div class="preview-body">
+              <h3 id="preview-title">Residential Construction</h3>
+              <p id="preview-text">Luxury residences, multi-family towers, and bespoke private estates engineered to highest safety and aesthetic criteria.</p>
+              <div class="preview-specs-grid">
+                <div class="spec-item">
+                  <small>WARRANTY</small>
+                  <strong id="preview-warranty">10 Years Structural</strong>
+                </div>
+                <div class="spec-item">
+                  <small>STANDARD</small>
+                  <strong id="preview-standard">ISO 9001:2015</strong>
+                </div>
+                <div class="spec-item">
+                  <small>EST. DURATION</small>
+                  <strong id="preview-lead">6 – 18 Months</strong>
+                </div>
+                <div class="spec-item">
+                  <small>SUPERVISION</small>
+                  <strong>Chartered Engineers</strong>
+                </div>
+              </div>
+              <a href="#estimator" class="preview-action-btn">CALCULATE ESTIMATED BUDGET ↓</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Execution Process Timeline: 01 Plan -> 02 Design -> 03 Build -> 04 Handover -->
+      <div class="process-wrapper rv">
+        <h4 class="process-title">THE AUREX 4-PHASE EXECUTION METHODOLOGY</h4>
+        <div class="process">
+          <div class="proc-step">
+            <div class="proc-num">01</div>
+            <div class="proc-info">
+              <h5>Plan</h5>
+              <p>Geotechnical feasibility, budget modeling &amp; permitting.</p>
+            </div>
+          </div>
+          <div class="proc-step d1">
+            <div class="proc-num">02</div>
+            <div class="proc-info">
+              <h5>Design</h5>
+              <p>BIM 3D structural engineering &amp; architectural drawings.</p>
+            </div>
+          </div>
+          <div class="proc-step d2">
+            <div class="proc-num">03</div>
+            <div class="proc-info">
+              <h5>Build</h5>
+              <p>Zero-compromise civil execution with daily QA checks.</p>
+            </div>
+          </div>
+          <div class="proc-step d3">
+            <div class="proc-num">04</div>
+            <div class="proc-info">
+              <h5>Handover</h5>
+              <p>Turnkey commissioning, certifications &amp; 10-year warranty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXTRA CONSTRUCTION FEATURE: PROJECT ESTIMATOR ==================== -->
+    <section id="estimator" class="estimator-section">
+      <div class="estimator-container">
+        <div class="est-header rv">
+          <div class="sub-tag">INSTANT SCOPE ESTIMATOR</div>
+          <h2 class="big-t">PROJECT CALCULATOR</h2>
+          <p>Get a preliminary budget range, steel/concrete volume, and duration estimate for your project in seconds.</p>
+        </div>
+
+        <div class="estimator-grid">
+          <!-- Controls Column -->
+          <div class="est-controls rv">
+            <!-- Project Type -->
+            <div class="est-field">
+              <label for="est-type">Project Sector / Category:</label>
+              <select id="est-type" class="est-select">
+                <option value="residential" selected>Residential Construction</option>
+                <option value="commercial">Commercial High-Rise / Office</option>
+                <option value="industrial">Industrial PEB / Factory Hub</option>
+                <option value="infrastructure">Civil Infrastructure / Bridge</option>
+                <option value="renovation">Structural Renovation / Retrofit</option>
+              </select>
+            </div>
+
+            <!-- Built-Up Area Slider -->
+            <div class="est-field">
+              <div class="slider-header">
+                <label for="est-area">Total Built-Up Area:</label>
+                <span class="slider-val"><b id="area-val">5,000</b> Sq. Ft.</span>
+              </div>
+              <input type="range" id="est-area" min="500" max="50000" step="250" value="5000" class="est-slider">
+              <div class="slider-markers">
+                <span>500 sq ft</span>
+                <span>25,000 sq ft</span>
+                <span>50,000+ sq ft</span>
+              </div>
+            </div>
+
+            <!-- Quality Tier Selector -->
+            <div class="est-field">
+              <label>Finishing &amp; Specification Grade:</label>
+              <div class="tier-buttons" role="group">
+                <button type="button" class="tier-btn" data-tier="standard">STANDARD</button>
+                <button type="button" class="tier-btn active" data-tier="premium">PREMIUM (BIM)</button>
+                <button type="button" class="tier-btn" data-tier="luxury">ULTRA LUXURY</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Results Card -->
+          <div class="est-results-card rv d1">
+            <div class="results-header">
+              <span class="est-badge">ESTIMATED PROJECTION</span>
+              <span class="currency-tag">VALUATION ESTIMATE</span>
+            </div>
+            <div class="est-price-box">
+              <small>APPROXIMATE INVESTMENT RANGE</small>
+              <div class="est-amount" id="est-amount">$425,000 – $550,000</div>
+              <div class="est-per-sqft" id="est-per-sqft">~$85 – $110 per Sq. Ft.</div>
+            </div>
+
+            <div class="est-stats-row">
+              <div class="est-stat-pill">
+                <span>EST. DURATION</span>
+                <strong id="est-timeline">8 – 11 Months</strong>
+              </div>
+              <div class="est-stat-pill">
+                <span>REINFORCED STEEL</span>
+                <strong id="est-steel">~20 Metric Tons</strong>
+              </div>
+              <div class="est-stat-pill">
+                <span>CONCRETE VOLUME</span>
+                <strong id="est-concrete">~180 Cu. Yards</strong>
+              </div>
+            </div>
+
+            <button type="button" id="est-book-btn" class="est-apply-btn">
+              TRANSFER SCOPE TO CONSULTATION FORM →
+            </button>
+            <p class="est-disclaimer">*Preliminary engineering estimate. Official formal BOQ generated upon site geotechnical survey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: CONTACT SECTION ==================== -->
+    <section id="contact" class="contact">
+      <!-- Architectural Hero Image Above Contact -->
+      <div class="c-img rv">
+        <img src="images/contact.jpg" alt="Architectural facade detail with intricate geometric structure" loading="lazy">
+        <div class="c-img-overlay"></div>
+      </div>
+
+      <!-- Right Side Vertical Orange Strip matching UI Mockup ("AUREX 2026") -->
+      <div class="contact-vertical-strip" aria-hidden="true">
+        <svg class="strip-logo"><use href="#logo"/></svg>
+        <span class="strip-text">AUREX 2026</span>
+      </div>
+
+      <!-- Section Title with ANIMATED CIRCLE MARK from UI Mockup -->
+      <div class="c-title-wrapper rv">
+        <div class="c-title">
+          <!-- Animated Radar Sonar Pulse Rings -->
+          <div class="circle-radar-pulse"></div>
+          <div class="circle-radar-pulse d1"></div>
+
+          <!-- The Multi-Loop Animated Sketched Circle SVG -->
+          <svg class="ring-svg" viewBox="0 0 520 220" preserveAspectRatio="none">
+            <use href="#sketch-circle"/>
+          </svg>
+
+          <!-- Rotating Circular Stamp Badge -->
+          <div class="circle-rotating-stamp">
+            <svg viewBox="0 0 100 100">
+              <path id="stamp-path" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none"/>
+              <text>
+                <textPath href="#stamp-path">★ AUREX CONSTRUCTIONS ★ BUILT TO LAST ★ 2026 ★</textPath>
+              </text>
+            </svg>
+          </div>
+
+          <!-- Main Contact Title Heading -->
+          <h2 class="contact-h2">CONTACT</h2>
+        </div>
+      </div>
+
+      <!-- Contact Grid: Links on Left, Quote Form on Right -->
+      <div class="c-grid">
+        <!-- Contact Links Column -->
+        <div class="c-links">
+          <div class="c-links-header rv">
+            <span class="sub-tag">GET IN TOUCH DIRECTLY</span>
+            <h3>START YOUR PROJECT</h3>
+            <p>Our principal structural engineers and estimators are available for site inspections, blueprints, and feasibility reviews.</p>
+          </div>
+
+          <!-- Instagram Link with Signature Script Font -->
+          <a class="c-link-item rv" href="https://instagram.com/Aurex_Constructions" target="_blank" rel="noopener" aria-label="Visit Aurex Constructions on Instagram">
+            <div class="c-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div class="c-link-text">
+              <small>INSTAGRAM</small>
+              <span class="script c-script">Aurex_Constructions</span>
+            </div>
+          </a>
+
+          <!-- Phone Link -->
+          <a class="c-link-item rv d1" href="tel:+917822907111" aria-label="Call Aurex Constructions">
+            <div class="c-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="c-link-text">
+              <small>OFFICIAL INQUIRY HOTLINE</small>
+              <strong class="phone-num">+91 7822907111</strong>
+            </div>
+          </a>
+
+          <!-- Email Link -->
+          <a class="c-link-item rv d2" href="mailto:aurex@gmail.com" aria-label="Email Aurex Constructions">
+            <div class="c-icon-circle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="c-link-text">
+              <small>PROJECT TENDERS &amp; CONSULTATIONS</small>
+              <span class="script c-script">aurex@gmail.com</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Consultation & Quotation Form -->
+        <form id="quote" class="quote-form rv d1" novalidate>
+          <div class="form-badge">FAST RESPONSE GUARANTEE (24H)</div>
+          <h4>Request a Proposal</h4>
+          <p class="form-desc">Provide your parameters below to receive engineering feasibility insights and a detailed bill of quantities.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Full Name *</label>
+              <input id="form-name" name="n" placeholder="e.g. Johnathan Vance" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="form-phone">Phone Number *</label>
+              <input id="form-phone" name="p" type="tel" placeholder="+91 / +01 ..." required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-email">Email Address *</label>
+              <input id="form-email" name="e" type="email" placeholder="client@company.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="form-type">Service Sector *</label>
+              <select id="form-type" name="t" required>
+                <option value="Residential Construction">Residential Construction</option>
+                <option value="Commercial Construction">Commercial Construction</option>
+                <option value="Industrial Construction">Industrial Construction</option>
+                <option value="Infrastructure Development">Infrastructure Development</option>
+                <option value="Renovation & Redevelopment">Renovation &amp; Redevelopment</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-msg">Project Scope &amp; Site Details *</label>
+            <textarea id="form-msg" name="m" rows="3" placeholder="Tell us about the site location, approximate square footage, timeline expectations, or architectural vision..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn" id="submit-btn">
+            <span>TRANSMIT PROJECT ENQUIRY</span>
+            <i class="btn-arrow">→</i>
+          </button>
+          <div id="form-feedback" class="form-feedback" role="alert"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 6: THANK YOU SECTION ==================== -->
+    <section class="thanks" id="thankyou">
+      <!-- Animated Background Technical Grid -->
+      <div class="thanks-bg-grid"></div>
+
+      <!-- Side Strip Badge -->
+      <p class="side">AUREX 2026</p>
+
+      <!-- Dual Construction Cranes on Left & Right with Swaying Jibs & Blinking Beacons -->
+      <div class="tc-wrap left">
+        <svg class="tc tc-left"><use href="#crane-detailed"/></svg>
+      </div>
+      <div class="tc-wrap right">
+        <svg class="tc tc-right"><use href="#crane-detailed"/></svg>
+      </div>
+
+      <!-- Top Center Stepped Logo & Year -->
+      <div class="thanks-meta-top rv">
+        <svg class="t-logo"><use href="#logo"/></svg>
+        <div class="yr-badge">
+          <span class="yr-num">2026</span>
+          <span class="yr-text">AUREX CONSTRUCTIONS</span>
+        </div>
+      </div>
+
+      <!-- Giant Shimmering Display "THANK YOU" Typography -->
+      <div class="ty-wrapper">
+        <h2 class="ty">
+          <span class="w1">THANK</span>
+          <span class="w2">YOU</span>
+        </h2>
+        <!-- Diagonal Handwriting Cursive Overlay with Handwriting Animation -->
+        <span class="script att">For your attention</span>
+      </div>
+
+      <!-- Bottom Tagline -->
+      <div class="thanks-footer-tag rv">
+        <div class="hazard mini"></div>
+        <p>HONORING OUR COMMITMENT TO SOLID GROUND AND HIGH STANDARDS</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="f-top-strip">
+      <div class="f-live-status">
+        <span class="status-indicator"></span>
+        <span>GLOBAL OPERATIONS: ACTIVE</span>
+        <span class="f-sep">|</span>
+        <span id="hq-clock">HQ TIME: --:--:-- IST</span>
+      </div>
+      <div class="f-safety-award">
+        <span>🏆 2025 NATIONAL EXCELLENCE IN CIVIL SAFETY</span>
+      </div>
+    </div>
+
+    <div class="f-grid">
+      <!-- Column 1: Aurex Brand -->
+      <div class="f-col rv">
+        <div class="f-brand">
+          <svg class="f-logo"><use href="#logo"/></svg>
+          <h5>AUREX</h5>
+        </div>
+        <p class="f-about-p">
+          Dedicated to pushing architectural and civil engineering boundaries across Asia and global markets. Structures engineered for perpetuity.
+        </p>
+        <div class="f-certs">
+          <span>ISO 9001:2015</span>
+          <span>LEED GOLD</span>
+          <span>CREDAI MEMBER</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore Navigation -->
+      <div class="f-col rv d1">
+        <h5>EXPLORE</h5>
+        <a href="#home">Home Base</a>
+        <a href="#about">About Firm</a>
+        <a href="#projects">Portfolio Projects</a>
+        <a href="#services">Capabilities</a>
+        <a href="#estimator">Scope Calculator</a>
+        <a href="#contact">Consultation</a>
+      </div>
+
+      <!-- Column 3: Expertise -->
+      <div class="f-col rv d2">
+        <h5>EXPERTISE</h5>
+        <a href="#services">Residential Contracting</a>
+        <a href="#services">Commercial High-Rises</a>
+        <a href="#services">Industrial &amp; Logistics Hubs</a>
+        <a href="#services">Civil Infrastructure Works</a>
+        <a href="#services">Structural Retrofitting</a>
+        <a href="#services">BIM &amp; Structural Design</a>
+      </div>
+
+      <!-- Column 4: Contact & Office -->
+      <div class="f-col rv d3">
+        <h5>GLOBAL HQ</h5>
+        <div class="f-contact-info">
+          <p><strong>Aurex Construction Towers</strong></p>
+          <p>Sector 44, Tech Boulevard</p>
+          <p>Pune / Mumbai, India</p>
+          <a href="tel:+917822907111" class="f-phone">+91 7822907111</a>
+          <a href="mailto:aurex@gmail.com" class="f-mail">aurex@gmail.com</a>
+        </div>
+        <a href="https://maps.google.com/?q=Pune" target="_blank" rel="noopener" class="f-directions">
+          GET DIRECTIONS ON MAP →
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Strip -->
+    <div class="f-bot">
+      <span>© 2026 Aurex Constructions. All Rights Reserved.</span>
+      <div class="f-bot-links">
+        <a href="#privacy" id="privacy-link">Privacy Policy</a>
+        <span>·</span>
+        <a href="#terms" id="terms-link">Terms of Service</a>
+        <span>·</span>
+        <a href="#safety">Safety Standards</a>
+      </div>
+      <span class="f-built or">BUILT TO LAST.</span>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WIDGETS ==================== -->
+  <!-- Direct WhatsApp Chat Floating Button -->
+  <a href="https://wa.me/917822907111?text=Hello%20Aurex%20Constructions,%20I%20would%20like%20to%20discuss%20a%20construction%20project." 
+     class="wa" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Direct WhatsApp Consultation">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- Animated Back-to-Top Button with Circular Progress -->
+  <button id="top" aria-label="Return to top of page">
+    <svg class="top-progress-ring" viewBox="0 0 44 44">
+      <circle class="ring-bg" cx="22" cy="22" r="18"/>
+      <circle class="ring-active" cx="22" cy="22" r="18" id="top-ring"/>
+    </svg>
+    <span class="top-arrow">↑</span>
+  </button>
+
+  <!-- ==================== MODAL: PROJECT SPECIFICATIONS VIEWER ==================== -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
